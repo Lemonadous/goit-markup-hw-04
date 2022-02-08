@@ -1,6 +1,7 @@
 :root {
   --header-background-color: #ffffff;
   --header-logo-color: #000000;
+  --header-border-color: #ececec;
   --body-color: #212121;
   --index-title: #ffffff;
   --index-text: #757575;
@@ -80,7 +81,7 @@ img {
 /*----------------------------------body-----------------------------*/
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -97,11 +98,11 @@ img {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 .header-logo {
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -110,10 +111,13 @@ img {
   letter-spacing: 0.03em;
   color: var(--header-logo-color);
   margin-right: 94px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .navigation {
   display: flex;
+  align-items: center;
 }
 
 .navigation-link {
@@ -123,6 +127,7 @@ img {
 .navigation-list {
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 
 .navigation-list .link.current {
@@ -134,10 +139,15 @@ img {
   color: var(--accent-color);
 }
 
+.navigation-link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .header-list-contacts {
   display: flex;
   align-items: center;
-  margin-left: auto;
 }
 
 .navigation-item:not(:last-child) {
@@ -147,19 +157,23 @@ img {
 .header-item-contacts:not(:last-child) {
   margin-right: 50px;
 }
-.header-link-mail {
-  color: #757575;
-}
-.header-link-mail:focus,
-.header-link-mail:hover {
-  color: var(--accent-color);
+
+.icon-contacts {
+  margin: 0;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
-.header-link-tel {
+.contacts {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: #757575;
 }
-.header-link-tel:focus,
-.header-link-tel:hover {
+
+.contacts:focus,
+.contacts:hover {
   color: var(--accent-color);
 }
 
@@ -171,9 +185,17 @@ img {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--index-title-background);
+  margin: 0 auto;
   margin-bottom: 94px;
+  max-width: 1600px;
+  background-color: var(--index-title-background);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -214,6 +236,10 @@ img {
 }
 
 /* -------features------- */
+
+.index-features {
+  padding-top: 94px;
+}
 
 .index-features-list {
   display: flex;
@@ -271,8 +297,12 @@ img {
   background: var(--main-background-color);
 }
 
+.team-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .index-team-name {
-  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -285,7 +315,6 @@ img {
 .index-team-text {
   font-weight: 400;
   font-size: 16px;
-  margin-bottom: 30px;
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
@@ -314,8 +343,6 @@ img {
   padding: 6px 22px;
   letter-spacing: 0.03em;
   cursor: pointer;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   border: 0;
   color: var(--main-btn-text-color-first);
@@ -326,6 +353,8 @@ img {
 .categories-button:focus {
   color: var(--main-btn-text-color-second);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .categories-item:not(:last-child) {
@@ -335,6 +364,8 @@ img {
 .categories-list .categories-button.current {
   color: var(--main-btn-text-color-second);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* -----examples----- */
@@ -343,7 +374,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 34px;
 }
 .examples-item:nth-child(3n + 3) {
   margin-right: 0;
