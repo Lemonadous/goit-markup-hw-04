@@ -195,7 +195,6 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   margin: 0 auto;
-  margin-bottom: 94px;
   max-width: 1600px;
   background-color: var(--index-title-background);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -264,7 +263,7 @@ img {
   align-items: center;
   width: 100%;
   height: 120px;
-  padding: 25px 100px;
+  /* padding: 25px 100px; */
   margin-bottom: 30px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -328,6 +327,8 @@ img {
 .team-info {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-right: 32px;
+  padding-left: 32px;
 }
 
 .index-team-name {
@@ -358,6 +359,9 @@ img {
 .social-item {
   width: 44px;
   height: 44px;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-link {
@@ -487,6 +491,10 @@ img {
   justify-content: center;
 }
 
+.examples-link {
+  display: inline-block;
+}
+
 .examples-item:hover,
 .examples-item:focus {
   background: #ffffff;
@@ -543,6 +551,7 @@ img {
 
 .footer-box {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-link-map:hover,
@@ -600,12 +609,14 @@ img {
 }
 
 .footer-box-join {
-  margin-top: 12px;
   margin-left: 70px;
-  margin-bottom: 40px;
 }
 
+.footer-box-join .social-list {
+  margin-top: 20px;
+}
 .join-us {
+  font-weight: 700px;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
